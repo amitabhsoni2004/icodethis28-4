@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0e0e0;
+    color: #15133b;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.profile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.card {
+    /* height: 400px; */
+    width: 700px;
+    background-color: #fff9f2;
+    /* border: 2px solid black; */
+    box-shadow: 0px 0px 0px 10px #14143b;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 100px;
+    padding: 25px;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.progress {
+    width: 50%;
+}
+
+.profilePhoto {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 40%;
+}
+
+.p1 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.socialMedia div {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: 0.1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.socialMedia div:hover {
+    background-color: #14143b;
+    border: 0.1px solid #14143b;
+}
+
+.socialMedia div:hover svg {
+
+    color: #ffffff;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.progressBar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    position: relative;
+}
+.p3{
+    position: absolute;
+    top: -46px;
+    right: -22px;
+    background-color: #14143b;
+    border: 2px solid #14143b;
+    color: white;
+    font-weight: 500;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    display: none;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 11px;
+    background: #d3d3d3;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.followBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+    align-self: flex-end;
+}
+
+.b1 {
+    margin-right: 5px;
+}
+
+.btn{
+    padding: 13px 40px;
+    border: none;
+    background-color: #14143b;
+    border: 2px solid #14143b;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.btn:hover,.p3:hover {
+    background-color: white;
+    color: #14143b;
+}
+
+.moreInfo {
+    cursor: pointer;
+}
+.loginmess {
+    position: absolute;
+    top: -74px;
+    right: 5px;
+    height: 55px;
+    background-color: white;
+    border: 0.1px solid rgb(193, 193, 193);
+    width: 291px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    border-radius: 5px;
+}
+
+.greenTimer {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.greenTimer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color:  #14143b;
+    animation: timer 3s ease-out 1;
+}
+
+.loginmess .message {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 10px 10px 5px;
+    text-wrap: nowrap;
+}
+
+.message p {
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 16px;
+}
+@keyframes timer {
+    100%{
+        width: 0%;
+    }
+}
+@media screen and (max-width:600px) {
+    .card{
+        gap: 10px;
+    }
+}
+@media screen and (max-width:450px) {
+    .profile{
+        padding: 10px;
+    }
+    .card{
+        flex-direction: column;
+        width: 366px;
+        gap: 0px;
+        box-shadow: 0px 0px 0px 5px #14143b;
+    }
+    .info,.progress{
+        width: 100%;
+    }
+    .progress{
+        gap: 25px;
+    }
+    .progressBar{
+        margin-top: 30px;
+    }
+    .profilePhoto{
+        height: 80px;
+        width: 80px;
+    }
+}
